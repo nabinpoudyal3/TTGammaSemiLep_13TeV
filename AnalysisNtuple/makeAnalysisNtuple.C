@@ -1084,6 +1084,9 @@ void makeAnalysisNtuple::FillEvent(std::string year)
 	jetVector.SetPtEtaPhiM(tree->jetPt_[jetInd], tree->jetEta_[jetInd], tree->jetPhi_[jetInd], tree->jetMass_[jetInd]);
 	
 	_jetGenJetIdx.push_back(tree->jetGenJetIdx_[jetInd]);
+	
+	_jetHadronFlavour.push_back(tree->jetHadFlvr_[jetInd]);
+	
 	// TODO Reimplement with NANOAOD
 
 	// double resolution = getJetResolution(tree->jetPt_[jetInd], tree->jetEta_[jetInd], tree->rho_);

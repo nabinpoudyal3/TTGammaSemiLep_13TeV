@@ -311,6 +311,10 @@ class makeAnalysisNtuple {
     std::vector<float>   _jetDeepB;
     std::vector<float>   _jetDeepC;
 
+
+    std::vector<Int_t>   _jetHadronFlavour;
+    
+    
     std::vector<Int_t>   _jetGenJetIdx;
 
     /* std::vector<int>     _jetPartonID; */
@@ -599,6 +603,10 @@ void makeAnalysisNtuple::InitBranches(){
     outputTree->Branch("jetDeepB"  , &_jetDeepB );
     outputTree->Branch("jetDeepC"  , &_jetDeepC );
 
+
+    outputTree->Branch("jetHadronFlavour"  , &_jetHadronFlavour );
+    
+    
     outputTree->Branch("jetGenJetIdx"  , &_jetGenJetIdx );
 	
     /* if (!tree->isData_){ */
@@ -886,6 +894,8 @@ void makeAnalysisNtuple::InitVariables()
     _jetDeepB.clear();
     _jetDeepC.clear();
 
+    _jetHadronFlavour.clear();
+    
     _jetGenJetIdx.clear();
 
     _fwdJetPt.clear();
